@@ -1,0 +1,290 @@
+/* Basis */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Page */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 16px 8px;
+}
+
+/* Explore */
+
+.explore {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px 24px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+/* Header */
+
+.explore-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.explore-header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.header-icons {
+  display: flex;
+  gap: 6px;
+}
+
+.icon-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Suche */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.search-icon {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 13px;
+}
+
+.search-bar input::placeholder {
+  color: #9ca3af;
+}
+
+.filter-icon {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: #9ca3af;
+}
+
+/* chips */
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chip {
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+.chip-active {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}
+
+/* Trending */
+
+.trending-banner {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #1d4ed8, #2563eb, #3b82f6);
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.trending-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.trending-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.trending-banner p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Cards grid */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 16px;
+}
+
+/* Card */
+
+.card {
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card.empty .card-body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Placeholder für Hintergründe der Karten */
+
+.placeholder.food {
+  background: radial-gradient(circle at 20% 0, #fed7aa, #b45309);
+}
+
+.placeholder.fashion {
+  background: linear-gradient(135deg, #e5e7eb, #f97316);
+}
+
+.placeholder.crafts {
+  background: linear-gradient(135deg, #a16207, #facc15);
+}
+
+.placeholder.fitness {
+  background: linear-gradient(135deg, #22c55e, #0f766e);
+}
+
+.placeholder.gallery {
+  background: linear-gradient(135deg, #c4b5fd, #6d28d9);
+}
+
+.placeholder.concert {
+  background: linear-gradient(135deg, #1d4ed8, #0f172a);
+}
+
+.card-tag {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.85);
+  color: #f9fafb;
+}
+
+/* Card body */
+
+.card-body {
+  padding: 10px 12px 10px;
+}
+
+.card-title {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.card-icon {
+  font-size: 12px;
+}
+
+/*  */
+
+@media (max-width: 720px) {
+  .explore {
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 480px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
