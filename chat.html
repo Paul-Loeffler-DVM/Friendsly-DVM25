@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles-chat.css" />
+</head>
+<body>
+  <div class="app-shell">
+    
+    <aside class="list-pane">
+      <header class="list-header">
+        <div class="list-title">App</div>
+        <div class="list-search">
+          <span class="icon-search">&#xf002;</span>
+          <input type="text" placeholder="Search chats" />
+        </div>
+      </header>
+
+      <ul class="chat-list">
+        <li class="chat-item chat-item-active">
+          <img
+            src="placeholder"
+            alt="Helena Hills"
+            class="avatar"
+          />
+          <div class="chat-item-text">
+            <div class="chat-name">Helena Hills</div>
+            <div class="chat-preview">
+              Will head to the Help Center...
+            </div>
+          </div>
+        </li>
+
+        <li class="chat-item">
+          <div class="avatar placeholder">C</div>
+          <div class="chat-item-text">
+            <div class="chat-name">Carlo Emilio</div>
+            <div class="chat-preview">Let’s go</div>
+          </div>
+        </li>
+
+        <li class="chat-item">
+          <div class="avatar placeholder">O</div>
+          <div class="chat-item-text">
+            <div class="chat-name">Oscar Davis</div>
+            <div class="chat-preview">Trueeeee</div>
+          </div>
+        </li>
+
+        <li class="chat-item">
+          <div class="avatar placeholder">D</div>
+          <div class="chat-item-text">
+            <div class="chat-name">Daniel Jay Park</div>
+            <div class="chat-preview">
+              lol yeah, are you coming to the lunch...
+            </div>
+          </div>
+        </li>
+
+        <li class="chat-item">
+          <div class="avatar placeholder">M</div>
+          <div class="chat-item-text">
+            <div class="chat-name">Mark Rojas</div>
+            <div class="chat-preview">
+              great catching up over dinner!!
+            </div>
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="conversation-pane">
+      <header class="conversation-header">
+        <div class="conv-user">
+          <img
+            src="placeholder"
+            alt="Helena Hills"
+            class="avatar avatar-md"
+          />
+          <div>
+            <div class="conv-name">Helena Hills</div>
+            <div class="conv-status">Active 20m ago</div>
+          </div>
+        </div>
+        <div class="conv-actions">
+          <span class="icon">&#128222;</span>
+          <span class="icon">&#128253;</span>
+          <span class="icon">&#xe234;</span>
+        </div>
+      </header>
+
+      <section class="conversation-body">
+        <div class="conv-divider">Nov 30, 2023, 9:41 AM</div>
+
+        <div class="msg-row msg-row-right">
+          <div class="msg-bubble msg-dark">
+            No honestly I’m thinking of a career pivot
+          </div>
+        </div>
+
+        <div class="msg-row msg-row-right">
+          <div class="msg-bubble msg-dark">
+            This is the main chat template
+          </div>
+        </div>
+
+        <div class="msg-row msg-row-left">
+          <div class="msg-bubble msg-light">Oh?</div>
+        </div>
+
+        <div class="msg-row msg-row-left">
+          <div class="msg-bubble msg-light">Cool</div>
+        </div>
+
+        <div class="msg-row msg-row-left">
+          <div class="msg-bubble msg-light">How does it work?</div>
+        </div>
+
+        <div class="msg-row msg-row-right">
+          <div class="msg-bubble msg-dark">Simple</div>
+        </div>
+
+        <div class="msg-row msg-row-right wide">
+          <div class="msg-bubble msg-dark">
+            You just edit any text to type in the conversation you want
+            to show, and delete any bubbles you don’t want to use
+          </div>
+        </div>
+
+        <div class="msg-row msg-row-right">
+          <div class="msg-bubble msg-dark">Boom</div>
+        </div>
+
+        <div class="msg-row msg-row-left wide">
+          <div class="msg-bubble msg-light">Hmmm</div>
+        </div>
+
+        <div class="msg-row msg-row-left wide">
+          <div class="msg-bubble msg-light">I think I get it</div>
+        </div>
+
+        <div class="msg-row msg-row-left wide">
+          <div class="msg-bubble msg-light">
+            Will head to the Help Center if I have more questions tho
+          </div>
+        </div>
+      </section>
+
+      <footer class="conversation-input">
+        <input type="text" placeholder="Enter your message" />
+        <div class="input-actions">
+          <span class="icon">&#xf581;</span>
+          <span class="icon">&#xf0c6;</span>
+          <span class="icon">&#xf1d8;</span>
+        </div>
+      </footer>
+    </main>
+
+    <aside class="profile-pane">
+      <header class="profile-header">
+        <div class="profile-title">Profile</div>
+        <span class="icon-code">&lt;/&gt;</span>
+      </header>
+
+      <section class="profile-main">
+        <img
+          #src="placeholder"
+          alt="Helena Hills"
+          class="profile-avatar"
+        />
+        <div class="profile-name">Helena</div>
+        <div class="profile-status">Active 20m ago</div>
+
+        <button class="btn btn-black">View profile</button>
+
+        <div class="profile-options">
+          <div class="profile-row">
+            <span class="icon">&#xf002;</span>
+            <span>Search chat</span>
+          </div>
+          <div class="profile-row">
+            <span class="icon">&#xf03e;</span>
+            <span>Sent images</span>
+          </div>
+          <div class="profile-row">
+            <span class="icon">⋯</span>
+            <span>More options</span>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </div>
+</body>
+</html>
