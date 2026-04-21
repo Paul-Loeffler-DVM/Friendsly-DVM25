@@ -13,5 +13,6 @@ Erstellen des Codes für "event-creation_page 1-3" + Github an Tag X durch Dittm
 Erstellen des Codes für "FAQ_page" + Github an Tag X durch Dittmann /
 Erstellen des Codes für "contact_form_page" + Github an Tag X durch Dittmann /
 Überarbeiten des Codes für "login" an tag X durch Dittmann /
-Erstellen des Codes für "create_account" + Github an Tag X durch Dittmann /
-Verknüpfen der Seiten auf dem Server an Tag X durch Löffler (+ Dittmann,Ibach) /
+Erstellen des Codes für "create_account 1-3" + Github am 21.04.2026 durch Dittmann /
+Verknüpfen der Seiten auf dem Server am 21.04.2026 durch Löffler (+ Dittmann,Ibach) /
+Überarbeiten des Codes für "login" + Github am 21.04.2026 durch Dittmann
