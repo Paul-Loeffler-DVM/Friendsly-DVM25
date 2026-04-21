@@ -1,5 +1,6 @@
 Erstellen des Github an Tag X durch Löffler /
 Testen des Github an Tag X auf Funktionsweise durch Löffler /
+Design des Logo an Tag X durch Dittmann /
 Design der ersten 7 Seiten an Tag X durch Dittmann /
 Umwandeln des Design "login" und auf Github hochladen an Tag X durch Dittmann /
 Umwandeln des Design "explore" und auf Github hochladen an Tag X durch Zühlke /
