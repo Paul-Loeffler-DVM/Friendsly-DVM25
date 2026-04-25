@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ihre Aktivität</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            margin-top: 0.3rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .radio-group {
+            margin-top: 0.5rem;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            margin-left: 0.3rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Ihre Aktivität</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="title">Titel</label>
+            <input type="text" id="title" name="title">
+
+            <label for="description">Beschreibung</label>
+            <textarea id="description" name="description"></textarea>
+
+            <label for="image">Bild</label>
+            <input type="file" id="image" name="image" accept="image/*">
+
+            <h2>Kategorie</h2>
+
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="sport" name="category" value="sport">
+                    <label for="sport">Sport</label>
+                </div>
+
+                <div class="radio-option">
+                    <input type="radio" id="kunst" name="category" value="kunst">
+                    <label for="kunst">Kunst</label>
+                </div>
+
+                <div class="radio-option">
+                    <input type="radio" id="musik" name="category" value="musik">
+                    <label for="musik">Musik</label>
+                </div>
+            </div>
+            <button type="submit">Speichern</button>
+        </form>
+    </main>
+</body>
+</html>

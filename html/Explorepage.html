@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{% static 'friendsly/css/Explorepage.css' %}">
+</head>
+<body>
+  <div class="page">
+    <main class="explore">
+      <!--HEADER-->
+      <header class="explore-header">
+        <h1>Explore</h1>
+        <div class="header-icons">
+          <button class="icon-btn" aria-label="Toggle layout">▦</button>
+          <button class="icon-btn" aria-label="Filters">☰</button>
+        </div>
+      </header>
+
+      <!--Suche-->
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search for anything…" />
+        <button class="filter-icon" aria-label="More filters">⋯</button>
+      </div>
+
+      <!--TAGS-->
+      <div class="chip-row">
+        <button class="chip chip-active">All</button>
+        <button class="chip">Outdoor</button>
+        <button class="chip">Food</button>
+        <button class="chip">Fashion</button>
+        <button class="chip">Handicrafts</button>
+        <button class="chip">Fitness</button>
+        <button class="chip">Arts</button>
+        <button class="chip">Music</button>
+        <button class="chip">Gaming</button>
+      </div>
+
+      <!--TRENDING-->
+      <section class="trending-banner">
+        <div class="trending-label">
+          <span class="trending-icon">⚡</span>
+          <span>Trending</span>
+        </div>
+        <p>Entdecken Sie Aktivitäten von Personen in ihrer Nähe</p>
+      </section>
+
+      <!--Karteien-->
+      <section class="cards-grid">
+        <!-- Reihe1 -->
+        <article class="card">
+          <div class="card-tag">Outdoor</div>
+          <div class="card-image">
+            <img
+              src="a.png"
+            />
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Aktivität1</h2>
+            <p class="card-subtitle">Name1</p>
+            <div class="card-footer">
+              <span class="card-icon">❤</span>
+              <span class="card-count">1234</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-tag">Food</div>
+          <div class="card-image placeholder food"></div>
+          <div class="card-body">
+            <h2 class="card-title">Aktivität2</h2>
+            <p class="card-subtitle">Name2</p>
+            <div class="card-footer">
+              <span class="card-icon">❤</span>
+              <span class="card-count">1234</span>
+            </div>
+          </div>
+        </article>
+
+        <!--Reihe2-->
+        <article class="card">
+          <div class="card-tag">Fashion</div>
+          <div class="card-image placeholder fashion"></div>
+          <div class="card-body">
+            <h2 class="card-title">Aktivität3</h2>
+            <p class="card-subtitle">Name3</p>
+            <div class="card-footer">
+              <span class="card-icon">❤</span>
+              <span class="card-count">1234</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-tag">Handicrafts</div>
+          <div class="card-image placeholder crafts"></div>
+          <div class="card-body">
+            <h2 class="card-title">Aktivität4</h2>
+            <p class="card-subtitle">Name4</p>
+            <div class="card-footer">
+              <span class="card-icon">❤</span>
+              <span class="card-count">1234</span>
+            </div>
+          </div>
+        </article>
+
+        <!--Reihe3-->
+        <article class="card">
+          <div class="card-tag">Fitness</div>
+          <div class="card-image placeholder fitness"></div>
+          <div class="card-body">
+            <h2 class="card-title">Aktivität5</h2>
+            <p class="card-subtitle">Name5</p>
+            <div class="card-footer">
+              <span class="card-icon">❤</span>
+              <span class="card-count">1234</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-tag">Art</div>
+          <div class="card-image placeholder gallery"></div>
+          <div class="card-body">
+            <h2 class="card-title">Aktivität6</h2>
+            <p class="card-subtitle">Name6</p>
+            <div class="card-footer">
+              <span class="card-icon">❤</span>
+              <span class="card-count">1234</span>
+            </div>
+          </div>
+        </article>
+
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

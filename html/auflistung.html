@@ -1,0 +1,15 @@
+<h2>Einträge</h2>
+
+{% for entry in entries %}
+  <div style="border:1px solid #ccc; padding:10px; margin:10px 0;">
+    <h3>{{ entry.title }}</h3>
+    <p>{{ entry.description }}</p>
+    <p>{{ entry.time_ago }}</p>
+    
+    {% if entry.image_url %}
+      <img src="{{ entry.image_url }}" width="200">
+    {% endif %}
+  </div>
+{% empty %}
+  <p>Keine Einträge vorhanden.</p>
+{% endfor %}

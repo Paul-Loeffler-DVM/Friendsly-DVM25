@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil</title>
+    <link rel="stylesheet" href="{% static 'friendsly/css/profil.css' %}">
+</head>
+
+<body>
+    <main class="main-layout">
+        <header class="header">
+            <div class="avatar"></div>
+            <h1>{{ user }}</h1>
+        </header>
+
+        <div class="description">
+            <h2>Über mich</h2>
+            <p>Hallo, ich bin das Beispielprofil. In dieser BEschreibung kann ich viel über mich erzählen.</p>
+        </div>
+
+        <div class="profil-container">
+            <section class="feed">
+                <h2>Posts</h2>
+                <article class="post">
+                    <div class="post-header">
+                        <div>
+                            <p class="post-name">Name_placeholder</p>
+                            <span class="post-time">2h ago</span>
+                        </div>
+                    </div>
+
+                    <div class="post-image placeholder fitness"></div>
+                    
+                    <div class="post-body">
+                        <p>Heute Motgen Workout!</p>
+                        <div class="post-footer">
+                            <span>❤</span>
+                            <span>1234</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <aside class="interaction-list">
+
+                <h3>Interaktionen</h3>
+
+                <div class="chat">
+                    <a href="#">Chat beginnen</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+</body>
+
+</html>
