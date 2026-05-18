@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat - My Dashboard</title>
+    <link rel="stylesheet" href="chat_page.css" />
+  </head>
+  <body>
+    <div class="layout">
+      
+      <aside class="sidebar">
+          <a href="dashboard_page.html" class="menu-item">Dashboard</a>
+          <a href="#" class="menu-item">Events</a>
+          <a href="#" class="menu-item">Hobbies</a>
+          <a href="#" class="menu-item">People</a>
+          <a href="#" class="menu-item">Cities</a>
+          <a href="#" class="menu-item">Explore</a>
+          <a href="#" class="menu-item">Profile</a>
+          <a href="#" class="menu-item active">Chat</a>
+      </aside>
+
+      <main class="content chat-view-override">
+        <header class="topbar-left-layout">
+            <h1>Chat</h1>
+          <button class="manage-btn" type="button">⚙  Chat Settings</button>
+        </header>
+
+        <div class="chat-main-card">
+          <section class="chat-window-pane">
+            <header class="chat-window-header">
+              <div class="active-user-box">
+                <img src="placeholder.jpg" alt="Sarah Johnson" class="chat-avatar" />
+                <div>
+                  <div class="active-user-title">Sarah Johnson</div>
+                  <div class="active-user-status">Active 20m ago</div>
+                </div>
+              </div>
+            </header>
+
+            <div class="chat-thread-body">
+              <div class="thread-date-divider">May 30, 2026, 9:41 AM</div>
+
+              <div class="message-row row-right">
+                <div class="bubble bubble-primary">
+                  No honestly I'm thinking of a career pivot
+                </div>
+              </div>
+
+              <div class="message-row row-left">
+                <div class="bubble bubble-secondary">Oh?</div>
+              </div>
+
+              <div class="message-row row-left">
+                <div class="bubble bubble-secondary">Cool</div>
+              </div>
+
+              <div class="message-row row-left">
+                <div class="bubble bubble-secondary">What's on your mind?</div>
+              </div>
+
+              <div class="message-row row-right">
+                <div class="bubble bubble-primary">
+                  Thinking of becoming a musician...
+                </div>
+              </div>
+            </div>
+
+            <footer class="chat-window-footer">
+              <input type="text" placeholder="Enter your message..." />
+              <button class="manage-btn" type="button">Send</button>
+            </footer>
+          </section>
+
+          <aside class="chat-list-pane">
+            <header class="pane-search-header">
+              <input type="text" placeholder="Search chats..." />
+            </header>
+
+            <ul class="chat-user-list">
+              <li class="user-item user-item-active">
+                <img src="placeholder.jpg" alt="Sarah Johnson" class="chat-avatar" />
+                <div class="user-item-details">
+                  <div class="user-item-row">
+                    <span class="user-name">Sarah Johnson</span>
+                    <span class="user-meta">11:42 AM</span>
+                  </div>
+                  <div class="user-preview-text">Are you going to the Tech Summit?</div>
+                </div>
+              </li>
+
+              <li class="user-item">
+                <div class="chat-avatar placeholder-avatar">C</div>
+                <div class="user-item-details">
+                  <div class="user-item-row">
+                    <span class="user-name">Carlo Emilio</span>
+                    <span class="user-meta">Yesterday</span>
+                  </div>
+                  <div class="user-preview-text">Let's go</div>
+                </div>
+              </li>
+
+              <li class="user-item">
+                <div class="chat-avatar placeholder-avatar">O</div>
+                <div class="user-item-details">
+                  <div class="user-item-row">
+                    <span class="user-name">Oscar Davis</span>
+                    <span class="user-meta">Jan 30</span>
+                  </div>
+                  <div class="user-preview-text">Trueeeee</div>
+                </div>
+              </li>
+            </ul>
+          </aside>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
