@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Dashboard</title>
+    <link rel="stylesheet" href="dashboard_page.css" />
+  </head>
+  <body>
+    <div class="layout">
+      
+      <aside class="sidebar">
+        <div>
+          <a href="#" class="menu-item active">Dashboard</a>
+          <a href="#" class="menu-item">Events</a>
+          <a href="#" class="menu-item">Hobbies</a>
+          <a href="#" class="menu-item">People</a>
+          <a href="#" class="menu-item">Cities</a>
+          <a href="#" class="menu-item">Explore</a>
+          <a href="#" class="menu-item">Profile</a>
+          <a href="#" class="menu-item">Chat</a>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <h1>Dashboard</h1>
+          </div>
+          <button class="manage-btn" type="button">♡ Manage Following</button>
+        </header>
+
+        <nav class="tabs" aria-label="Dashboard filters">
+          <button class="tab active" type="button">All</button>
+          <button class="tab" type="button">Events</button>
+          <button class="tab" type="button">Hobbies</button>
+          <button class="tab" type="button">People</button>
+          <button class="tab" type="button">Cities</button>
+        </nav>
+
+        <section class="section">
+          <h2>◷ Events You Follow <span id="event-count">0</span></h2>
+          
+          <div class="grid-responsive">
+
+            <article class="event-card-container">
+              <a href="placeholder1.html" class="full-card-link"></a>
+
+              <div class="media event-1"><span class="chip">Music</span></div>
+              <div class="event-body">
+                <h3><a href="placeholder1.html" class="event-title-link">Summer Music Festival</a></h3>
+                <ul>
+                  <li>📅 July 15, 2026</li>
+                  <li>📍 <a href="map-link.html" class="location-link">Central Park, NYC</a></li>
+                  <li>👥 2,500 attending</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="event-card-container">
+              <a href="placeholder2.html" class="full-card-link"></a>
+
+              <div class="media event-2"><span class="chip">Wellness</span></div>
+              <div class="event-body">
+                <h3><a href="placeholder2.html" class="event-title-link">Morning Yoga &amp; Meditation</a></h3>
+                <ul>
+                  <li>📅 Every Saturday</li>
+                  <li>📍 <a href="map-link.html" class="location-link">Zen Studio, Downtown</a></li>
+                  <li>👥 45 attending</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="event-card-container">
+              <a href="placeholder3.html" class="full-card-link"></a>
+
+              <div class="media event-3"><span class="chip">Technology</span></div>
+              <div class="event-body">
+                <h3><a href="placeholder3.html" class="event-title-link">Tech Summit 2026</a></h3>
+                <ul>
+                  <li>📅 September 10-12, 2026</li>
+                  <li>📍 <a href="map-link.html" class="location-link">Convention Center</a></li>
+                  <li>👥 1,200 attending</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="event-card-container">
+              <a href="placeholder4.html" class="full-card-link"></a>
+
+              <div class="media event-4"><span class="chip">Art</span></div>
+              <div class="event-body">
+                <h3><a href="placeholder4.html" class="event-title-link">Contemporary Art Exhibition</a></h3>
+                <ul>
+                  <li>📅 April 1 - May 30, 2026</li>
+                  <li>📍 <a href="map-link.html" class="location-link">Modern Art Gallery</a></li>
+                  <li>👥 850 attending</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>♡ Hobbies You Follow <span id="hobby-count">0</span></h2>
+          <div class="hobbies-grid">
+            <a href="hobby-details-1.html" class="hobby-card"><p class="icon">📷</p><h3>Photography</h3><p>8,400 followers</p></a>
+            <a href="hobby-details-2.html" class="hobby-card"><p class="icon">🎨</p><h3>Painting</h3><p>5,200 followers</p></a>
+            <a href="hobby-details-3.html" class="hobby-card"><p class="icon">🎵</p><h3>Music</h3><p>12,100 followers</p></a>
+            <a href="hobby-details-4.html" class="hobby-card"><p class="icon">📖</p><h3>Reading</h3><p>6,700 followers</p></a>
+            <a href="hobby-details-5.html" class="hobby-card"><p class="icon">☕</p><h3>Coffee Tasting</h3><p>3,900 followers</p></a>
+            <a href="hobby-details-6.html" class="hobby-card"><p class="icon">✈</p><h3>Travel</h3><p>15,600 followers</p></a>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2> ◌ People You Follow <span id="people-count">0</span></h2>
+          <div class="people-grid">
+            <a href="profile-sarah.html" class="person-card">
+              <img src="placeholder.jpg" alt="Sarah Johnson" />
+              <h3>Sarah Johnson</h3>
+              <p>Photography enthusiast<br />&amp; travel blogger</p>
+              <small>12 mutual friends</small>
+            </a>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Count and update Events
+        const eventCards = document.querySelectorAll(".grid-responsive .event-card-container");
+        document.getElementById("event-count").textContent = eventCards.length;
+
+        // 2. Count and update Hobbies
+        const hobbyCards = document.querySelectorAll(".hobbies-grid .hobby-card");
+        document.getElementById("hobby-count").textContent = hobbyCards.length;
+
+        // 3. Count and update People
+        const personCards = document.querySelectorAll(".people-grid .person-card");
+        document.getElementById("people-count").textContent = personCards.length;
+      });
+    </script> -->
+    
+  </body>
+</html>
