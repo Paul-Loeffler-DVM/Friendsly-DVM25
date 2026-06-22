@@ -1,0 +1,151 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Explore</title>
+    <link rel="stylesheet" href="{% static 'friendsly/css/explore_page.css' %}" />
+  </head>
+  <body>
+    <div class="layout">
+
+      <aside class="sidebar">
+        <div>
+          <a href="/dashboard" class="menu-item ">Dashboard</a>
+          <a href="/event/creation/schritt-1" class="menu-item">Events</a>
+          <a href="#" class="menu-item">Hobbies</a>
+          <a href="#" class="menu-item">People</a>
+          <a href="#" class="menu-item">Cities</a>
+          <a href="/explore" class="menu-item active">Explore</a>
+          <a href="/profil" class="menu-item">Profile</a>
+          <a href="/chat" class="menu-item">Chat</a>
+        </div>
+        <div class="sidebar-footer">
+          <a href="logout" class="logout-link">Logout</a>
+        </div>
+      </aside>
+
+
+      <main class="content">
+
+        <!--HEADER-->
+        <header class="topbar">
+          <div>
+            <h1>Explore</h1>
+          </div>
+          <div class="header-icons">
+            <button class="icon-btn" onclick="toggleView('grid')" aria-label="Grid view">▦</button>
+            <button class="icon-btn" onclick="toggleView('list')" aria-label="List view">☰</button>
+          </div>
+        </header>
+
+        <nav class="tabs" aria-label="Explore filters">
+          <a href="{% url 'explore' %}" class="tab {% if not selected_category %}active{% endif %}" style="text-decoration: none;">All</a>
+  
+          {% for main_cat, sub_cats in category_mapping.items %}
+            <a href="/explore?category={{ main_cat|urlencode }}" 
+              class="tab {% if selected_category == main_cat %}active{% endif %}" 
+              style="text-decoration: none;">
+              {{ main_cat }}
+            </a>
+          {% endfor %}
+        </nav>
+
+        <!--Search-->
+        <div class="search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Search for anything…" />
+        </div>
+
+        <!--TRENDING-->
+        <!-- <section class="trending-banner">
+          <div class="trending-label">
+            <span class="trending-icon">⚡</span>
+            <span>Trending</span>
+          </div>
+          <p>Entdecken Sie Aktivitäten von Personen in ihrer Nähe</p>
+        </section> -->
+
+        <!--Cards-->
+        <section id="cards-grid" class="cards-grid">
+          <!-- Row1 -->
+          {% if entries %}
+            {% for entry in entries %}
+              <article class="card">
+                <a href="{% url 'post' post_id=entry.id %}" style="text-decoration: none; color: inherit; display: block;">
+                  <div class="card-tag">{{ entry.category }}</div>
+                  <div class="card-image">
+                    {% if entry.image_url %}
+                      <img src="{{ entry.image_url }}" alt="Event Bild">
+                    {% endif %}
+                  </div>
+              
+                  <div class="card-body">
+                    <h2 class="card-title">{{ entry.title }}</h2>
+                    <p class="card-subtitle">
+                      <a href="{% url 'user_profil' username=entry.creator %}" style="text-decoration: none; color: inherit; font-weight: bold;">
+                        {{ entry.creator }}
+                      </a>
+                    </p>
+                    <p class="card-subtitle">Erstellt vor: {{ entry.time_ago }}</p>
+                  </div>
+                </a>
+
+                <div class="card-footer">
+                  <div class="event-participation">
+                    <a href="{% url 'join_event' post_id=entry.id %}" class="join-btn">
+                      {% if current_username in entry.participant %}
+                        Austragen
+                      {% else %}
+                        Teilnehmen
+                      {% endif %}
+                    </a>
+                    <span class="participant-count">
+                      👥 {{ entry.participant|length }}
+                    </span>
+                  </div>
+
+                  <div class="footer-actions-right">
+                    {% if entry.creator == current_username %}
+                      <a href="{% url 'edit_post' post_id=entry.id %}" class="edit-link">Bearbeiten</a>
+                    {% endif %}
+
+                    <a href="{% url 'like_post' post_id=entry.id %}" class="like-link">
+                      <span class="card-icon">
+                        {% if current_username in entry.likes %}❤️{% else %}🖤{% endif %}
+                      </span>
+                      <span class="card-count">
+                        {{ entry.likes|length }}
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            {% endfor %}
+          {% else %}
+            <p style="grid-column: span 2; text-align: center; color: #6b7280; font-style: italic;">Keine Aktivitäten gefunden</p>
+          {% endif %}
+        </section>
+
+        <template id="card-template">
+          <article class="card">
+            <a href="#" class="card-link" style="text-decoration: none; color: inherit; display: block;">
+              <div class="card-tag"></div>
+              <div class="card-image"><img src="" alt=""></div>
+              <div class="card-body">
+                <h2 class="card-title"></h2>
+                <p class="card-subtitle"></p>
+              </div>
+            </a>
+
+            <div class="card-footer" onclick="toggleLike(this)">
+              <span class="card-icon" style="cursor: pointer;">❤</span>
+              <span class="card-count">0</span>
+            </div>
+          </article>
+        </template> 
+
+      </main>
+    </div>
+  </body>
+</html>
