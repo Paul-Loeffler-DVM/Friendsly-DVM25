@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>People</title>
+    <link rel="stylesheet" href="people.css" />
+  </head>
+  <body>
+    <div class="layout">
+
+      <aside class="sidebar">
+        <div>
+          <a href="#" class="menu-item ">Dashboard</a>
+          <a href="#" class="menu-item">Events</a>
+          <a href="#" class="menu-item">Hobbys</a>
+          <a href="#" class="menu-item active">People</a>
+          <a href="#" class="menu-item">Citys</a>
+          <a href="#" class="menu-item">Explore</a>
+          <a href="#" class="menu-item">Profile</a>
+          <a href="#" class="menu-item">Chat</a>
+        </div>
+      </aside>
+
+      <main class="content">
+
+        <!--HEADER-->
+        <header class="topbar">
+          <div>
+            <h1>People</h1>
+          </div>
+          <!-- <div class="header-icons">
+            <button class="icon-btn" onclick="toggleView('grid')" aria-label="Grid view">▦</button>
+            <button class="icon-btn" onclick="toggleView('list')" aria-label="List view">☰</button>
+          </div> -->
+        </header>
+
+        <!--Search-->
+        <div class="search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Search for anything…" />
+        </div>
+
+        <!--Cards-->
+        <section id="cards-grid" class="cards-grid">
+
+          <!-- Row1 -->
+          <article class="card">
+            <a href="placeholder.html" style="text-decoration: none; color: inherit; display: block;">
+              
+              <div class="card-image">
+                <img src="natasha.jpg" alt="natasha">
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Natasha</h2>
+                <p class="card-subtitle">Hi, ich bin Natasha. <br> Ich liebe Sport und gutes Essen.</p>
+              </div>
+            </a>
+
+            <div class="card-footer">
+              <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
+              <span class="card-count">0</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <a href="placeholder.html" style="text-decoration: none; color: inherit; display: block;">
+              
+              <div class="card-image">
+                <img src="ana.jpg" alt="ana">
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Ana</h2>
+                <p class="card-subtitle">Hi, ich bin Ana. <br> Ich suche Leute für einen Buchclub</p>
+              </div>
+            </a>
+
+            <div class="card-footer">
+              <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
+              <span class="card-count">0</span>
+            </div>
+          </article>
+
+
+          <!--Row2-->
+          <article class="card">
+            <a href="placeholder.html" style="text-decoration: none; color: inherit; display: block;">
+              
+              <div class="card-image">
+                <img src="mike.jpg" alt="mike">
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Mike</h2>
+                <p class="card-subtitle">Hi, Mike hier<br> Lass ne Runde League spielen!</p>
+              </div>
+            </a>
+
+            <div class="card-footer">
+              <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
+              <span class="card-count">0</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <a href="placeholder.html" style="text-decoration: none; color: inherit; display: block;">
+              
+              <div class="card-image">
+                <img src="amy.jpg" alt="amy">
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Amy</h2>
+                <p class="card-subtitle">Hi, I'm Amy. <br> I'm new in Stuttgart.</p>
+              </div>
+            </a>
+
+            <div class="card-footer">
+              <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
+              <span class="card-count">0</span>
+            </div>
+          </article>
+
+
+          <!--Row3-->
+          <article class="card">
+            <a href="placeholder.html" style="text-decoration: none; color: inherit; display: block;">
+              
+              <div class="card-image">
+                <img src="john.jpg" alt="john">
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Natasha</h2>
+                <p class="card-subtitle">Hallo <br> Lass uns zusammen zum Fußball gehen.</p>
+              </div>
+            </a>
+
+            <div class="card-footer">
+              <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
+              <span class="card-count">0</span>
+            </div>
+          </article>
+
+
+          <article class="card">
+            <a href="placeholder.html" style="text-decoration: none; color: inherit; display: block;">
+              
+              <div class="card-image">
+                <img src="ryan.jpg" alt="ryan">
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Ryan</h2>
+                <p class="card-subtitle">Hallo, ich bin Ryan <br> Ich trainiere gerade für einen Marathon und suche Gleichgesinnte.</p>
+              </div>
+            </a>
+
+            <div class="card-footer">
+              <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
+              <span class="card-count">0</span>
+            </div>
+          </article>
+
+
+        </section>
+
+        <!-- <template id="card-template">
+          <article class="card">
+            <a href="#" class="card-link" style="text-decoration: none; color: inherit; display: block;">
+              <div class="card-tag"></div>
+              <div class="card-image"><img src="" alt=""></div>
+              <div class="card-body">
+                <h2 class="card-title"></h2>
+                <p class="card-subtitle"></p>
+              </div>
+            </a>
+
+            <div class="card-footer" onclick="toggleLike(this)">
+              <span class="card-icon" style="cursor: pointer;">❤</span>
+              <span class="card-count">0</span>
+            </div>
+          </article>
+        </template> -->
+
+      </main>
+    </div>
+  </body>
+</html>
