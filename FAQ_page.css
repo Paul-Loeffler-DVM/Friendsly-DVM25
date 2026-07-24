@@ -1,0 +1,144 @@
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  min-height: 100%;
+  font-family: "Inter", sans-serif;
+  background-color: #f6f7fb;
+  color: #1e2430;
+}
+
+.page {
+  width: min(100%, 700px);
+  margin: 0 auto;
+  padding: 32px 22px 38px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #e4eefc;
+  color: #3d72d9;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 14px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.12;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  margin: 10px auto 0;
+  color: #5f6a7f;
+  font-size: 18.5px;
+  line-height: 1.46;
+}
+
+.faq-group {
+  background-color: #fff;
+  border: 1px solid #e7ebf2;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.faq-group h2 {
+  padding: 19px 24px 11px;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.faq-group ul {
+  list-style: none;
+  padding: 0 0 4px;
+}
+
+.faq-group li {
+  min-height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+  border-top: 1px solid #edf1f6;
+  font-size: 21px;
+  color: #1b2536;
+}
+
+.faq-group li span {
+  color: #a5afbf;
+  font-size: 16px;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+/* contact */
+.contact {
+  margin-top: 26px;
+  background: #edf3ff;
+  border: 1px solid #e3ebfb;
+  border-radius: 12px;
+  padding: 34px 24px 28px;
+  text-align: center;
+}
+
+.contact-icon {
+  color: #2568f2;
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.contact h3 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.contact p {
+  margin: 10px auto 16px;
+  color: #5f6a7f;
+  font-size: 19px;
+}
+
+.contact-actions {
+  display: inline-flex;
+  gap: 12px;
+}
+
+.btn {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  height: 46px;
+  padding: 0 20px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2568f2;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1f58d1;
+}
