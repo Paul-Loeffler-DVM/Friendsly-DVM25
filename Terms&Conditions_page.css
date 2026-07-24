@@ -1,13 +1,11 @@
-*,
-*::before,
-*::after { 
+* { 
   box-sizing: border-box; 
   margin: 0; 
   padding: 0; 
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif; 
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f9;
@@ -22,7 +20,7 @@ body {
 }
 
 .centered-header {
-    text-align: center;                                                  /* Zentriert Text und Inline-Elemente */
+    text-align: center;
     border-bottom: 2px solid #007bff;
     margin-bottom: 30px;
     padding-bottom: 20px;
@@ -49,14 +47,14 @@ section {
 }
 
 .info-list {
-    list-style-type: disc;                                           /* Erzeugt Standard-Aufzählungspunkte */
-    margin-left: 20px;                                               /* Steuert die Stärke der Einrückung */
+    list-style-type: disc;
+    margin-left: 20px;
     padding-left: 20px;
     margin-bottom: 15px;
 }
 
 .info-list li {
-    margin-bottom: 5px;                                             /* Abstand zwischen den Zeilen */
+    margin-bottom: 5px;
 }
 
 footer {
